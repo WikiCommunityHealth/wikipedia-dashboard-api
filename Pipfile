@@ -3,14 +3,6 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
-[packages]
-fastapi = "*"
-gunicorn = "*"
-uvicorn = {extras = ["standard"], version = "*"}
-
-[dev-packages]
-flake8 = "*"
-
 [requires]
 python_version = "3.9"
 
@@ -18,3 +10,11 @@ python_version = "3.9"
 lint = "flake8"
 dev = "uvicorn main:app --workers 4 --port 5000 --reload"
 start = "gunicorn --bind 0.0.0.0:$PORT -w 4 -k uvicorn.workers.UvicornWorker main:app"
+
+[packages]
+fastapi = "*"
+gunicorn = "*"
+uvicorn = "*"
+
+[dev-packages]
+flake8 = "*"
