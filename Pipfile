@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [requires]
-python_version = "3.9"
+python_version = "3.9-bina"
 
 [scripts]
 lint = "flake8"
@@ -15,6 +15,13 @@ start = "gunicorn --bind 0.0.0.0:$PORT -w 4 -k uvicorn.workers.UvicornWorker mai
 fastapi = "*"
 gunicorn = "*"
 uvicorn = "*"
+graphene = "*"
+starlette = "*"
+mysql-connector-python = "*"
+graphene-sqlalchemy = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+graphene-mongo = "*"
 
 [dev-packages]
 flake8 = "*"
